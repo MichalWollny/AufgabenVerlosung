@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="position-absolute top-50 start-50 translate-middle">
+    <!-- brute force push it to the center BS5 -->
+    <h1 class="text-center">Verlose deine Aufgaben!</h1>
+    <!-- main container -->
+    <main class="d-flex container">
+      <!-- for when Randomizing is implemented -->
+      <div class="d-flex flex-column">
+        <img
+          src="https://bsmedia.business-standard.com/_media/bs/img/article/2021-09/20/full/1632101780-4712.jpg"
+          alt="Result"
+        />
+        <button id="verlosen-button" class="btn btn-success m-2">
+          Get a Random Task from the List Your Added To
+        </button>
+        <ul id="verloste-aufgabe"></ul>
+      </div>
+      <!-- for when Randomizing is implemented end -->
+
+      <!-- adding tasks -->
+      <div>
+        <div id="adding-aufgaben">
+          <input
+            type="text"
+            id="aufgabe-text"
+            placeholder="Input your tasks here"
+            class="d-flex container container-cover m-2"
+          />
+
+          <button class="btn btn-primary m-2" id="add-item">
+            Press to Add Task to List
+          </button>
+        </div>
+        <!-- adding tasks end -->
+        <br />
+        <!-- collapse button -->
+        <button
+          class="btn btn-primary m-2"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseExample"
+          aria-expanded="false"
+          aria-controls="collapseExample"
+        >
+          Click to Display the Current List
+        </button>
+        <!-- collapse button end-->
+
+        <!-- collapsed part -->
+        <div class="collapse" id="collapseExample">
+          <ul id="aufgaben-liste"></ul>
+        </div>
+        <div>
+          <div id="aufgaben-verlosung" class="collapse"></div>
+        </div>
+        <div class="collapse" id="collapseExample"></div>
+        <!-- collapsed part end-->
+      </div>
+      <!-- main container end -->
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
